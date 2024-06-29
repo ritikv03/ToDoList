@@ -8,9 +8,11 @@ function App() {
     //Making header here and importing all the components
     <div >
       <ParticleBackground/>
-      <h1 className="text-center">To Do List</h1>
+      <div className="content">
+      <h1>Complete Tasks!</h1>
       <TaskInput />      
       <TaskList />
+      </div>
     </div>
   )
 }

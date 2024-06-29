@@ -39,13 +39,17 @@ const TaskList = () => {
 
   //As there are going to be more than 1 task, we are implementing todo.map
   return (
-    <div>
+    <div className="">
       <ul>
         {todos.map((todo) => (
           <li
             key={todo.id}
             style={{
               textDecoration: todo.completed ? "line-through" : "none",
+              listStyle : "none",
+              margin: "10px",
+              marginBottom: "10px",
+              padding: "10px",
             }}>
             {editId === todo.id ? (
               <>
