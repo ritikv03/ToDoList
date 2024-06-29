@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.css';
 import ParticleBackground from "./components/ParticlesComponent"
 import TaskInput from "./components/TaskInput"
 import TaskList from "./components/TaskList"
