@@ -40,7 +40,7 @@ const TaskInput = () => {
                         onChange={handleTextChange}
                     />
                     <button 
-                    className='btn btn-primary btn-sm'
+                    className='btn btn-btn btn-outline-primary btn-sm'
                     onClick={handleAddTodo}
                     >
                      ADD 

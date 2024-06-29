@@ -29,3 +29,7 @@ body, html {
     padding: 20px;
   }
   
+  .task-content {
+    flex: 1;
+    gap: 10px;
+}

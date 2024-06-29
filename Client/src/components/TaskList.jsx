@@ -39,7 +39,7 @@ const TaskList = () => {
 
   //As there are going to be more than 1 task, we are implementing todo.map
   return (
-    <div className="">
+    <div className="task-content">
       <ul>
         {todos.map((todo) => (
           <li
@@ -58,17 +58,17 @@ const TaskList = () => {
                   value={editText}
                   onChange={(e) => setEditText(e.target.value)}
                 />
-                <button onClick={() => handleSaveEdit(todo.id)}>Save</button>
-                <button onClick={() => setEditId(null)}>Cancel</button>
+                <button className="btn btn-outline-success btn-sm" onClick={() => handleSaveEdit(todo.id)}>Save</button>
+                <button className="btn btn-outline-danger btn-sm" onClick={() => setEditId(null)}>Cancel</button>
               </>
             ) : (
               <>
                 {todo.text}
-                <button onClick={() => handleToggleComplete(todo.id)}>
+                <button className="btn btn-outline-success btn-sm" onClick={() => handleToggleComplete(todo.id)}>
                   {todo.completed ? "Mark Incomplete" : "Mark Complete"}
                 </button>
-                <button onClick={() => handleEditTodo(todo.id, todo.text)}>Edit</button>
-                <button onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
+                <button className="btn btn-outline-warning btn-sm" onClick={() => handleEditTodo(todo.id, todo.text)}>Edit</button>
+                <button className="btn btn-outline-danger btn-sm" onClick={() => handleDeleteTodo(todo.id)}>Delete</button>
               </>
             )}
           </li>
