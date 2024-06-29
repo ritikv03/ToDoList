@@ -1,5 +1,6 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addTodo } from "../Redux/todoSlice";
 
 
 const TaskInput = () => {
@@ -7,17 +8,21 @@ const TaskInput = () => {
     //Using the useState hook to manage the input field, by doing this, we can see that whatever we type on the field is clearly visible to the user
     const [enterText,setEnterText] = useState("")
 
-
+    //Initializing the dispatch method
+    const dispatch = useDispatch();
 
     //hander function to set the imput field value
     function handleTextChange(event){
         setEnterText(event.target.value);
     }
 
-    //hander function for add button so that the dispatch function is activated whenever the button is clicked
-    function handleAddButton(event){
-
-    }
+    //As the function name suggests, it handles the adding of the data
+    const handleAddTodo = () => {
+        if (text) {
+          dispatch(addTodo(text));
+          setText("");
+        }
+      };
 
     return (
         //Using the Bootstrap Grid System here to contain the large input field 
@@ -35,7 +40,7 @@ const TaskInput = () => {
                     />
                     <button 
                     className='btn btn-primary btn-sm'
-                    onClick={handleAddButton}
+                    onClick={handleAddTodo}
                     >
                      ADD 
                     </button>
