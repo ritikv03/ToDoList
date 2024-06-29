@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import {  useDispatch } from "react-redux";
 import { addTodo } from "../Redux/todoSlice";
-
 
 const TaskInput = () => {
 
@@ -18,9 +17,11 @@ const TaskInput = () => {
 
     //As the function name suggests, it handles the adding of the data
     const handleAddTodo = () => {
-        if (text) {
-          dispatch(addTodo(text));
-          setText("");
+        if (enterText) {
+            dispatch(addTodo({
+                text: enterText
+            }));
+            setEnterText("");
         }
       };
 
@@ -51,4 +52,5 @@ const TaskInput = () => {
     )
 }
 
+//Exporting the TaskInput here
 export default TaskInput
