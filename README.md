@@ -10,6 +10,12 @@ npm install --save
 
 This command will download all the necessary dependencies required for this project.
 
+# How to run this app
+
+This is a vite based app so we have to use:
+
+npm run dev
+
 # Technologies Used
 
 This project is utilizing vite, bootstrap and react-redux libraries/frameworks.
